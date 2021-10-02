@@ -1,0 +1,37 @@
+<template>
+    <lightning-card title="Lançar Contact">
+        <div class="slds-p-horizontal_small">
+            
+                <lightning-record-edit-form object-api-name="Account" onsuccess={handleSuccess}>
+                    <lightning-messages>
+                    </lightning-messages>
+                    <lightning-input-field 
+                        field-name="Type"
+                        onchange={tipoChange}>  
+                    </lightning-input-field>
+                    <!-- <lightning-button
+                            class="slds-m-top_small"
+                            label="Verificar tipo"
+                            onclick={verificaTipo}>
+                        </lightning-button> -->
+                    <lightning-input-field field-name="Name">  
+                    </lightning-input-field>
+                    <lightning-input-field field-name="Account_Mail__c">  
+                    </lightning-input-field>
+                    <lightning-input-field field-name="Active">  
+                    </lightning-input-field>
+                    <lightning-input-field field-name="BillingAddress">  
+                    </lightning-input-field>
+                    
+                        <lightning-button
+                            class="slds-m-top_small"
+                            type="submit"
+                            label="Create new">
+                        </lightning-button>
+                </lightning-record-edit-form>
+            
+        </div>
+
+    </lightning-card>
+
+</template>
