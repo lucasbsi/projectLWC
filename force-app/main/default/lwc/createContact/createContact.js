@@ -50,7 +50,7 @@ export default class RecordFormExample extends LightningElement {
 
    
 
-   showNotification() {
+    showNotification() {
         const evt = new ShowToastEvent({
             title: this._title,
             message: this.message,

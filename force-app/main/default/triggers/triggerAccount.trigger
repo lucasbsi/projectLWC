@@ -14,7 +14,7 @@ trigger triggerAccount on Account (after insert, after update) {
             AccountId=a.Id                                    
             ));
             MailManager.sendMail(a.Account_Mail__c, 'Oportunidade', 
-                   'Você recebeu uma nova oportunidade');          
+                                'Você recebeu uma nova oportunidade acesse a conta  -> https://resilient-koala-2nzugd-dev-ed.lightning.force.com/lightning/r/Account/'+a.Id+'/view');          
         }                
     }
     if(oppList.size()> 0){
