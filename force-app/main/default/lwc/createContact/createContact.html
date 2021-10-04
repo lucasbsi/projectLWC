@@ -24,8 +24,10 @@
                     <lightning-button onclick={pesquisacep}
                             class="slds-m-top_small"
                             label="Carrega CEP">
-                        </lightning-button>
-                    <lightning-input-field name="rua" id="rua" field-name="BillingStreet">  
+                    </lightning-button>
+                    <lightning-input-field name="cep_custom" id="cep_custom" field-name="CEP__c" >  
+                    </lightning-input-field>
+                    <lightning-input-field name="rua" id="rua" field-name="BillingStreet" value={rua}>  
                     </lightning-input-field>
                     <lightning-input-field name="cidade" id="cidade" field-name="BillingCity">  
                     </lightning-input-field>

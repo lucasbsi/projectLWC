@@ -9,6 +9,7 @@ export default class RecordFormExample extends LightningElement {
     variant = 'alert'
     mode = 'dismissible'
     cep = '';
+    rua = '';
     
     handleSuccess(event) {
         this.showToast();
@@ -128,9 +129,11 @@ export default class RecordFormExample extends LightningElement {
         //var cep = document.querySelector("#cep");
         // var cep = document.getElementById("cep").value;
         //this.cep = document.getElementById("cep").value;
-//alert(st);
+        //alert(st);
          alert(this.cep);
+         //const cep_tempo = document.getElementById('cep_custom').value = this.cep;
          this.cep = this.cep.replace(/\D/g, '');
+         //this.cep somente com dígitos.
          alert("cep - formatado"+this.cep);
 
         //Verifica se campo cep possui valor informado.
@@ -138,12 +141,19 @@ export default class RecordFormExample extends LightningElement {
 
             //Expressão regular para validar o CEP.
             var validacep = /^[0-9]{8}$/;
+            alert('valor de validacep'+validacep);
+            alert('valor de validacep testando o this.cpf'+validacep.test(this.cep));
 
             //Valida o formato do CEP.
             if(validacep.test(this.cep)) {
-
+                alert('entrei no if do validacep.test');
                 //Preenche os campos com "..." enquanto consulta webservice.
-                document.getElementById('rua').value="...";
+                //document.getElementById('rua').value="...";
+                
+                alert('preenchi o campo rua com ...');
+                // let theCep =document.querySelector
+                // alert(theCep);
+                document.getElementById('cep_custom').value="123";
                 document.getElementById('bairro').value="...";
                 document.getElementById('cidade').value="...";
                 document.getElementById('uf').value="...";
