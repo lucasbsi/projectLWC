@@ -2,7 +2,7 @@
     <lightning-card title="Cadastro de Contas">
         <div class="slds-p-horizontal_small">
             
-                <lightning-record-edit-form object-api-name="Account" onsuccess={handleSuccess}>
+                <lightning-record-edit-form method="get" action="." object-api-name="Account" onsuccess={handleSuccess}>
                     <lightning-messages>
                     </lightning-messages>
                     <lightning-input-field 
@@ -16,25 +16,27 @@
                     </lightning-input-field>
                     <lightning-input-field field-name="Active">  
                     </lightning-input-field>
-                    <lightning-input-field field-name="CEP__c">  
+                    <!-- <lightning-input-field name="cep" field-name="CEP__c">  
+                    </lightning-input-field> -->
+                    <lightning-input-field name="cep" id="cep" onkeyup={pesquisacep2} field-name="BillingPostalCode" >  
                     </lightning-input-field>
-                    <lightning-input-field field-name="BillingPostalCode">  
+                    <p>Olha o CEP que você está digitando:- {cep}</p>
+                    <lightning-button onclick={pesquisacep}
+                            class="slds-m-top_small"
+                            label="Carrega CEP">
+                        </lightning-button>
+                    <lightning-input-field name="rua" id="rua" field-name="BillingStreet">  
                     </lightning-input-field>
-                    <lightning-input-field field-name="BillingStreet">  
-                    </lightning-input-field>
-                    <lightning-input-field field-name="BillingCity">  
+                    <lightning-input-field name="cidade" id="cidade" field-name="BillingCity">  
                     </lightning-input-field>
                     <lightning-input-field field-name="BillingCountry">  
                     </lightning-input-field>
-                    <lightning-input-field field-name="BillingState">  
-                    </lightning-input-field>
-                    <lightning-input-field field-name="BillingStateCode">  
-                    </lightning-input-field>
-                    <lightning-input-field field-name="BillingCountryCode">  
+                    <lightning-input-field name="uf" id="uf" field-name="BillingState">  
                     </lightning-input-field>
                     
-                    <lightning-input-field field-name="BillingAddress">  
-                    </lightning-input-field>
+                    
+                    <!-- <lightning-input-field field-name="BillingAddress">  
+                    </lightning-input-field> -->
                     
                         <lightning-button
                             class="slds-m-top_small"
@@ -50,6 +52,8 @@
                             label="Verificar tipo"
                             onclick={verificaTipo}>
                         </lightning-button> -->
+
+                        <!-- onmouseout= {pesquisacep} -->
                 </lightning-record-edit-form>
             
         </div>
