@@ -16,17 +16,15 @@
                     </lightning-input-field>
                     <lightning-input-field field-name="Active">  
                     </lightning-input-field>
-                    <!-- <lightning-input-field name="cep" field-name="CEP__c">  
-                    </lightning-input-field> -->
                     <lightning-input-field name="cep" id="cep" onkeyup={pesquisacep2} field-name="BillingPostalCode" >  
                     </lightning-input-field>
-                    <p>Olha o CEP que você está digitando:- {cep}</p>
+                    <!-- <p>Olha o CEP que você está digitando:- {cep}</p>
                     <lightning-button onclick={pesquisacep}
                             class="slds-m-top_small"
                             label="Carrega CEP">
                     </lightning-button>
                     <lightning-input-field name="cep_custom" id="cep_custom" field-name="CEP__c" >  
-                    </lightning-input-field>
+                    </lightning-input-field> -->
                     <lightning-input-field name="rua" id="rua" field-name="BillingStreet" value={rua}>  
                     </lightning-input-field>
                     <lightning-input-field name="cidade" id="cidade" field-name="BillingCity">  
@@ -35,27 +33,12 @@
                     </lightning-input-field>
                     <lightning-input-field name="uf" id="uf" field-name="BillingState">  
                     </lightning-input-field>
-                    
-                    
-                    <!-- <lightning-input-field field-name="BillingAddress">  
-                    </lightning-input-field> -->
-                    
-                        <lightning-button
+                    <lightning-button
                             class="slds-m-top_small"
                             type="submit"
                             label="Criar nova conta">
-                        </lightning-button>
+                    </lightning-button>
 
-
-
-
-                    <!-- <lightning-button
-                            class="slds-m-top_small"
-                            label="Verificar tipo"
-                            onclick={verificaTipo}>
-                        </lightning-button> -->
-
-                        <!-- onmouseout= {pesquisacep} -->
                 </lightning-record-edit-form>
             
         </div>
